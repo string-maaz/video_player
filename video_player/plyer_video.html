@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plyr JS player</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/plyr@3/dist/plyr.css">
+    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"></script>
+    
+    <script type="text/javascript" src="https://unpkg.com/plyr@3"></script>
+    <style type="text/css">
+              .jwplayer.jw-flag-aspect-mode {
+                height: 100% !important;
+            }
+               @media screen and (max-width: 768px) {
+                 .jwplayer.jw-flag-aspect-mode {
+                    height: 65% !important;
+                	} 
+	                .videoplayer_width{
+	                  width:100%;
+	                  height:65%;
+	                }
+                }
+                .videoplayer_width{
+                  width:100% !important;
+                  height:100% !important;
+                }
+            </style>
+</head>
+<body>
+	<h1>Plyr Video Player</h1>
+            <div>
+              
+              <video id="plyr-video">
+              </video>
+            </div>
+
+      <script>
+        var plyr_player = new Plyr("#plyr-video");
+        plyr_player.source = {
+          type: 'video',
+          title: 'Example title',
+          sources: [
+            {
+              src: "https://cdn.careeranna.com/Mayank/Mayank+Jain+Introduction+-+New.mp4",
+              type: 'video/mp4',
+            }
+            
+          ]
+        };
+    </script>
+
+</body>
+</html>
